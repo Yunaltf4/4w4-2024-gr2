@@ -1,0 +1,21 @@
+/*
+Theme Name: theme-site
+Theme URI: https://wordpress.org/themes/twentytwenty/
+Author: Tony
+Author URI: https://wordpress.org/
+Description : theme de base developpe dans le cours 4W4
+Version : 1.0
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: theme-site
+Ce theme a ete deceloppe dans le casdre du cours 4w4
+*/
+
+/* variable */
+@import "variable";
+/* regle de normalization */ 
+@import "normalize";
+
+/* regle de base */ 
+@import "base/h";
