@@ -1,16 +1,32 @@
-// body {
-//     display: flex;
-//     flex-direction: column;
-// }
+body {
+    display: flex;
+    flex-direction: column;
+}
 
-// .global {
-//     display: flex;
-//     justify-content: center;
-// }
+.global {
+    display: flex;
+    justify-content: center;
+}
 
-// .global>section,
-// .global>header,
-// .global>footer {
-//     width: 1100px;
-//     border: 1px solid #aaa;
-// }
+.global>section,
+.global>header,
+.global>footer {    
+    flex: 0 1 900px;
+    border: 1px solid #aaa;
+}
+
+#entete{
+    background-color: var(--couleur-arriere-entete);
+}
+#accueil{
+    background-color: var(--couleur-arriere-accueil);
+}
+#galerie{
+    background-color: var(--couleur-arriere-galerie);
+}
+#evenement{
+    background-color: var(--couleur-arriere-evenement);
+}
+#footer{
+    background-color: var(--couleur-arriere-footer);
+}
