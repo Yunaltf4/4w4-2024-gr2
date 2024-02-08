@@ -14,8 +14,7 @@ Ce theme a ete deceloppe dans le casdre du cours 4w4
 
 /* variable */
 @import "variable";
-/* regle de normalization */ 
-@import "normalize";
-
 /* regle de base */ 
 @import "base/h";
+/* regle de pagination*/
+@import "layout";
