@@ -13,4 +13,5 @@
 - Améliorer le design général sans être trop spécifique
 - Ajouter 2 variables
 - Créer plusieurs commit
-- Une github-page
+- Github-page : https://yunaltf4.github.io/4w4-2024-gr2/
+
