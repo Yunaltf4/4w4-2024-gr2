@@ -1,7 +1,13 @@
+/*
+https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+*/
 :root {
-    --couleur-arriere-entete: #ccc;
-    --couleur-arriere-accueil: #ddd;
-    --couleur-arriere-footer: #999;
-    --couleur-arriere-evenement: #dd1;
-    --couleur-arriere-footer: #aaa;
+
+    --couleur-arriere-entete: #e5fa28;
+    --couleur-arriere-accueil: #929b4e;
+    --couleur-arriere-evenement: #e6a24f;
+    --couleur-arriere-galerie: #2d5633;
+    --couleur-arriere-footer: #a8bcf5;
+    --width-section: 80vw;
+    --min-height: 40vh;
 }

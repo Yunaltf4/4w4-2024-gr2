@@ -1,28 +1,36 @@
 // font import 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Honk&family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Honk&family=Kanit:wght@300&family=Lato&family=Protest+Guerrilla&family=Protest+Revolution&family=Workbench&display=swap');
 /*
 selecteur textuel de base
-*/
+*/  
 
 h1 {
-    color: red;
-    font-family: 'Lato', sans-serif;
     font-size: clamp(1.5rem, -2.875rem + 14vw, 5rem);
+    font-family: "Lato";
+    color : rgba(#2a2957, .5);
 }
-
-h2 {
-    font-family: 'Honk', system-ui;
-    font-size: clamp(1.5);
+h2 { 
+    font-size: clamp(1rem, -0.5714rem + 6.2857vw, 3.75rem);
+    font-family: "Honk";
+    color : rgba(#092918, .7);
 }
-
-h3 {}
-
-h4 {}
-
-h5 {}
-
-h6 {}
+h3 {
+    font-family: "Kanit";
+    color: white;
+}
+h4 {
+    font-family: "Protest Guerrilla";
+    color: blue;
+}
+h5 {
+    font-family: "Protest Revolution";
+    color: aqua;
+    border: 1px dotted green;
+}
+h6 {
+    font-family: "Workbench";
+    text-decoration: underline;
+}
 
 p {}
 
