@@ -11,16 +11,30 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
     --width-section: 80vw;
     --min-height: 40vh;
 
+    --nb-element: 5;
+    --increment-angle: calc(360/var(--nb-element));
+    // 360/5 = 72
+    --angle-initial: 180;
+    --hue1: var(--angle-initial);
+    --hue2: calc(var(--hue1) + var(--increment-angle));
+    --hue3: calc(var(--hue2) + var(--increment-angle));
+    --hue4: calc(var(--hue3) + var(--increment-angle));
+    --hue5: calc(var(--hue4) + var(--increment-angle));
 
-    --couleur-arriere-entete: hsl(0,100%,50%);
-    --couleur-arriere-accueil: hsl(60,100%,50%);
-    --couleur-arriere-evenement: hsl(120,100%,50%);
-    --couleur-arriere-galerie: hsl(180,100%,50%);
-    --couleur-arriere-footer: hsl(240,100%,50%);
-    
-    --couleur-entete: hsl(0,100%,90%);
-    --couleur-accueil: hsl(60,100%,15%);
-    --couleur-evenement: hsl(120,100%,15%);
-    --couleur-galerie: hsl(180,100%,15%);
-    --couleur-footer: hsl(240,100%,15%);
+
+    --s-arriere: 100%;
+    --l-arriere: 50%;
+    --s: 100%;
+    --l: 15%;
+    --couleur-arriere-entete: hsl(var(--hue1), var(--s-arriere), var(--l-arriere));
+    --couleur-arriere-accueil: hsl(var(--hue2), var(--s-arriere), var(--l-arriere));
+    --couleur-arriere-evenement: hsl(var(--hue3), var(--s-arriere), var(--l-arriere));
+    --couleur-arriere-galerie: hsl(var(--hue4), var(--s-arriere), var(--l-arriere));
+    --couleur-arriere-footer: hsl(var(--hue5), var(--s-arriere), var(--l-arriere));
+
+    --couleur-entete: hsl(var(--hue1), var(--s), var(--l));
+    --couleur-accueil: hsl(var(--hue2), var(--s), var(--l));
+    --couleur-evenement: hsl(var(--hue3), var(--s), var(--l));
+    --couleur-galerie: hsl(var(--hue4), var(--s), var(--l));
+    --couleur-footer: hsl(var(--hue5), var(--s), var(--l));
 }
