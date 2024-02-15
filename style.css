@@ -15,7 +15,7 @@ Ce theme a ete deceloppe dans le casdre du cours 4w4
 /*
 https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 */
-@import url("https://fonts.googleapis.com/css2?family=Honk&family=Kanit:wght@300&family=Lato&family=Protest+Guerrilla&family=Protest+Revolution&family=Workbench&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Protest+Guerrilla&family=Protest+Revolution&family=Protest+Riot&family=Workbench&display=swap");
 :root {
   --width-section: 80vw;
   --min-height: 40vh;
@@ -30,7 +30,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
   --s-arriere: 100%;
   --l-arriere: 50%;
   --s: 100%;
-  --l: 15%;
+  --l: 75%;
   --couleur-arriere-entete: hsl(var(--hue1), var(--s-arriere), var(--l-arriere));
   --couleur-arriere-accueil: hsl(var(--hue2), var(--s-arriere), var(--l-arriere));
   --couleur-arriere-evenement: hsl(var(--hue3), var(--s-arriere), var(--l-arriere));
@@ -54,7 +54,7 @@ h1 {
 
 h2 {
   font-size: clamp(1rem, -0.5714rem + 6.2857vw, 3.75rem);
-  font-family: "Honk";
+  font-family: "Protest Riot";
 }
 
 h3 {
