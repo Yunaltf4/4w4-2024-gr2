@@ -14,7 +14,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
     --nb-element: 5;
     --increment-angle: calc(360/var(--nb-element));
     // 360/5 = 72
-    --angle-initial: 180;
+    --angle-initial: 287;
     --hue1: var(--angle-initial);
     --hue2: calc(var(--hue1) + var(--increment-angle));
     --hue3: calc(var(--hue2) + var(--increment-angle));
@@ -26,15 +26,23 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
     --l-arriere: 50%;
     --s: 100%;
     --l: 75%;
-    --couleur-arriere-entete: hsl(var(--hue1), var(--s-arriere), var(--l-arriere));
-    --couleur-arriere-accueil: hsl(var(--hue2), var(--s-arriere), var(--l-arriere));
-    --couleur-arriere-evenement: hsl(var(--hue3), var(--s-arriere), var(--l-arriere));
-    --couleur-arriere-galerie: hsl(var(--hue4), var(--s-arriere), var(--l-arriere));
-    --couleur-arriere-footer: hsl(var(--hue5), var(--s-arriere), var(--l-arriere));
+    // --couleur-arriere-entete: hsl(var(--hue1), var(--s-arriere), var(--l-arriere));
+    // --couleur-arriere-accueil: hsl(var(--hue2), var(--s-arriere), var(--l-arriere));
+    // --couleur-arriere-evenement: hsl(var(--hue3), var(--s-arriere), var(--l-arriere));
+    // --couleur-arriere-galerie: hsl(var(--hue4), var(--s-arriere), var(--l-arriere));
+    // --couleur-arriere-footer: hsl(var(--hue5), var(--s-arriere), var(--l-arriere));
 
-    --couleur-entete: hsl(var(--hue1), var(--s), var(--l));
-    --couleur-accueil: hsl(var(--hue2), var(--s), var(--l));
-    --couleur-evenement: hsl(var(--hue3), var(--s), var(--l));
-    --couleur-galerie: hsl(var(--hue4), var(--s), var(--l));
-    --couleur-footer: hsl(var(--hue5), var(--s), var(--l));
+    // --couleur-entete: hsl(var(--hue1), var(--s), var(--l));
+    // --couleur-accueil: hsl(var(--hue2), var(--s), var(--l));
+    // --couleur-evenement: hsl(var(--hue3), var(--s), var(--l));
+    // --couleur-galerie: hsl(var(--hue4), var(--s), var(--l));
+    // --couleur-footer: hsl(var(--hue5), var(--s), var(--l));
+
+    --hue2: calc(var(hue1)+180);
+    --hue3: calc(var(hue3)+240);
+    --couleur-arriere-entete: hsl(var(--hue1), var(--s-arriere), 60%);
+    --couleur-arriere-accueil: hsl(var(--hue1), var(--s-arriere), 65%);
+    --couleur-arriere-evenement: hsl(var(--hue3), var(--s-arriere), 70%);
+    --couleur-arriere-galerie: hsl(var(--hue2), var(--s-arriere), 75%);
+    --couleur-arriere-footer: hsl(var(--hue1), var(--s-arriere), 80%);
 }

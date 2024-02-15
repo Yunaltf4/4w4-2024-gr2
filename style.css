@@ -21,7 +21,7 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
   --min-height: 40vh;
   --nb-element: 5;
   --increment-angle: calc(360/var(--nb-element));
-  --angle-initial: 180;
+  --angle-initial: 287;
   --hue1: var(--angle-initial);
   --hue2: calc(var(--hue1) + var(--increment-angle));
   --hue3: calc(var(--hue2) + var(--increment-angle));
@@ -31,16 +31,13 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
   --l-arriere: 50%;
   --s: 100%;
   --l: 75%;
-  --couleur-arriere-entete: hsl(var(--hue1), var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-accueil: hsl(var(--hue2), var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-evenement: hsl(var(--hue3), var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-galerie: hsl(var(--hue4), var(--s-arriere), var(--l-arriere));
-  --couleur-arriere-footer: hsl(var(--hue5), var(--s-arriere), var(--l-arriere));
-  --couleur-entete: hsl(var(--hue1), var(--s), var(--l));
-  --couleur-accueil: hsl(var(--hue2), var(--s), var(--l));
-  --couleur-evenement: hsl(var(--hue3), var(--s), var(--l));
-  --couleur-galerie: hsl(var(--hue4), var(--s), var(--l));
-  --couleur-footer: hsl(var(--hue5), var(--s), var(--l));
+  --hue2: calc(var(hue1)+180);
+  --hue3: calc(var(hue3)+240);
+  --couleur-arriere-entete: hsl(var(--hue1), var(--s-arriere), 60%);
+  --couleur-arriere-accueil: hsl(var(--hue1), var(--s-arriere), 65%);
+  --couleur-arriere-evenement: hsl(var(--hue3), var(--s-arriere), 70%);
+  --couleur-arriere-galerie: hsl(var(--hue2), var(--s-arriere), 75%);
+  --couleur-arriere-footer: hsl(var(--hue1), var(--s-arriere), 80%);
 }
 
 /* regle de base */
@@ -59,23 +56,49 @@ h2 {
 
 h3 {
   font-family: "Kanit";
-  color: white;
 }
 
 h4 {
   font-family: "Protest Guerrilla";
-  color: blue;
 }
 
 h5 {
   font-family: "Protest Revolution";
-  color: aqua;
   border: 1px dotted green;
 }
 
 h6 {
   font-family: "Workbench";
   text-decoration: underline;
+}
+
+button {
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  border: none;
+  padding: 0 56px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 7px;
+  background-color: #0070f3;
+  color: white;
+  font-weight: 400;
+  font-size: 16px;
+  box-shadow: 0 4px 14px 0 rgba(0, 118, 255, 0.39);
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+button :hover {
+  background: rgba(0, 118, 255, 0.9);
+  box-shadow: 0 6px 20px rgba(0, 118, 255, 0.23);
+}
+
+blockquote {
+  background-color: hsl(8, 50%, 50%);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 1px #000000;
+  border-bottom: 5px solid hsl(200, 77%, 27%);
 }
 
 /* regle de pagination*/
@@ -91,15 +114,10 @@ body {
   min-height: var(--min-height);
 }
 
-.global:not(.global:nth-child(1)) {
-  border-top: 0.2rem solid white;
-}
-
 .global > section,
 .global > header,
 .global > footer {
   flex: 0 1 var(--width-section);
-  background-color: rgba(0, 0, 0, 0.05);
   padding: 5rem 1rem;
   text-align: center;
 }
@@ -107,6 +125,7 @@ body {
 #entete {
   background-color: var(--couleur-arriere-entete);
   color: var(--couleur-entete);
+  position: relative;
 }
 
 #accueil {
@@ -115,16 +134,53 @@ body {
 }
 
 #galerie {
-  background-color: var(--couleur-arriere-galerie);
+  background: linear-gradient(180deg, var(--couleur-arriere-accueil), var(--couleur-arriere-evenement));
   color: var(--couleur-galerie);
+  z-index: 1;
 }
 
 #evenement {
   background-color: var(--couleur-arriere-evenement);
   color: var(--couleur-evenement);
+  position: relative;
 }
 
 #footer {
   background-color: var(--couleur-arriere-footer);
   color: var(--couleur-footer);
+}
+
+/* regle d'effect*/
+.vague {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.vague svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 58px;
+}
+
+/* regle de diagonal*/
+.diagonal {
+  position: relative;
+  isolation: isolate;
+}
+
+.diagonal::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  transform: skewY(-5deg);
+  background-color: var(--couleur-arriere-galerie);
 }/*# sourceMappingURL=style.css.map */

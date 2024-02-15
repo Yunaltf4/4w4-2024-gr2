@@ -16,17 +16,14 @@ h2 {
 
 h3 {
     font-family: "Kanit";
-    color: white;
 }
 
 h4 {
     font-family: "Protest Guerrilla";
-    color: blue;
 }
 
 h5 {
     font-family: "Protest Revolution";
-    color: aqua;
     border: 1px dotted green;
 }
 
@@ -38,3 +35,34 @@ h6 {
 p {}
 
 hr {}
+
+button{
+    
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border: none;
+    padding: 0 56px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 7px;
+    background-color: #0070f3;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+    transition: background 0.2s ease,color 0.2s ease,box-shadow 0.2s ease;
+    :hover{
+        background: rgba(0,118,255,0.9);
+        box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+    }
+    
+}
+
+blockquote{
+    background-color: hsl(8, 50%, 50%);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px 1px #000000;
+    border-bottom: 5px solid hsl(200, 77%, 27%);
+}
