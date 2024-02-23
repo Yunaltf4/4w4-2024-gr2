@@ -21,4 +21,18 @@ Ce theme a ete deceloppe dans le casdre du cours 4w4
 /* regle d'effect*/
 @import "effect/vague";
 /* regle de diagonal*/
-@import "effect/diagonal"
+@import "effect/diagonal";
+/* regle d'entete*/
+@import "entete";
+/* regle button*/
+@import "base/bouton";
+/* regle lien*/
+@import "base/lien";
+/* regle citation*/
+@import "citation";
+/* regle de footer*/
+@import "footer";
+/* regle de recherche*/
+@import "composant/recherche";
+/* regle de sociaux*/
+@import "composant/sociaux"

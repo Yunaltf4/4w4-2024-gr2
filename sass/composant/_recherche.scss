@@ -1,0 +1,16 @@
+.recherche{
+    display: flex;
+    justify-content: center;
+}
+
+.recherche__input{
+    display: block;
+    color:  rgb(73, 13, 13); 
+    border: 1px solid rgb(73, 13, 13);
+    border-radius: 10px 2px 2px 10px;   
+}
+
+.recherche__button{
+    border: 1px solid rgb(73, 13, 13);
+    border-radius: 2px 10px 10px 2px;
+}
