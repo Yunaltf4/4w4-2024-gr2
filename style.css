@@ -192,16 +192,17 @@ button.evenement:active {
 
 /* regle lien*/
 a {
-  color: var(--couleur-lien);
+  color: red;
+  text-shadow: 0px 0px 6px #000000;
 }
 a:hover, a:focus {
-  color: var(--couleur-hover-focus);
+  color: blue;
 }
 a:active {
-  color: var(--couleur-lien-active);
+  color: purple;
 }
 a:visited {
-  color: var(--couleur-lien-visited);
+  color: rgb(213, 71, 73);
 }
 
 /* regle citation*/
