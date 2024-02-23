@@ -161,7 +161,7 @@ body {
 
 /* regle d'entete*/
 .entete__header {
-  background-image: url("../image/25231.png");
+  background-image: url("./image/25231.png");
   background-repeat: no-repeat;
   background-size: 30%;
   background-position: 100% 50%;
