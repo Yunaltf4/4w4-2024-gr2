@@ -1,38 +1,46 @@
 /*
-Theme Name: theme-site
-Theme URI: https://wordpress.org/themes/twentytwenty/
-Author: Tony
+Theme Name: theme-gr2
+Theme URI: https://referenced.ca
+Author: Eddy Martin
 Author URI: https://wordpress.org/
-Description : theme de base developpe dans le cours 4W4
-Version : 1.0
+Description: Thème de base développé dans le cours 4W4
+Version: 1.0
+
 Requires PHP: 7.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: theme-site
-Ce theme a ete deceloppe dans le casdre du cours 4w4
+Text Domain: theme-gr2
+Ce thème a été développé dans le cadre du cours 4W4
 */
 
-/* variable */
+// https://developer.wordpress.org/themes/basics/main-stylesheet-style-css/
+
+/* ////////////////////////////////////////// */
+/* Variables css                              */
+/* ////////////////////////////////////////// */
 @import "variable";
-/* regle de base */ 
+
+/* ////////////////////////////////////////// */
+/* règles de base                             */
+/* ////////////////////////////////////////// */
 @import "base/h";
-/* regle de pagination*/
-@import "layout";
-/* regle d'effect*/
-@import "effect/vague";
-/* regle de diagonal*/
-@import "effect/diagonal";
-/* regle d'entete*/
-@import "entete";
-/* regle button*/
 @import "base/bouton";
-/* regle lien*/
 @import "base/lien";
-/* regle citation*/
-@import "citation";
-/* regle de footer*/
+/* ////////////////////////////////////////// */
+/* règles de la pagination                             */
+/* ////////////////////////////////////////// */
+@import "layout";
+
+@import "effect/vague";
+
+@import "effect/diagonal";
+
+@import "entete";
 @import "footer";
-/* regle de recherche*/
-@import "composant/recherche";
-/* regle de sociaux*/
+
+/* ////////////////////////////////////////// */
+/* composants                             */
+/* ////////////////////////////////////////// */
 @import "composant/sociaux";
+@import "composant/recherche";
+@import "composant/carte";

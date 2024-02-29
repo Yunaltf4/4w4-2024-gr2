@@ -1,0 +1,261 @@
+@charset "UTF-8";
+/*
+Theme Name: theme-gr2
+Theme URI: https://referenced.ca
+Author: Eddy Martin
+Author URI: https://wordpress.org/
+Description: Thème de base développé dans le cours 4W4
+Version: 1.0
+
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: theme-gr2
+Ce thème a été développé dans le cadre du cours 4W4
+*/
+/* ////////////////////////////////////////// */
+/* Variables css                              */
+/* ////////////////////////////////////////// */
+/*
+https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+*/
+@import url("https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Protest+Guerrilla&family=Protest+Revolution&family=Protest+Riot&family=Workbench&display=swap");
+:root {
+  --width-section: 1100px;
+  --min-height: 40vh;
+  --nb-element: 5;
+  --increment-angle: calc(360/var(--nb-element));
+  --angle-initial: 287;
+  --hue1: var(--angle-initial);
+  --hue2: calc(var(--hue1) + var(--increment-angle));
+  --hue3: calc(var(--hue2) + var(--increment-angle));
+  --hue4: calc(var(--hue3) + var(--increment-angle));
+  --hue5: calc(var(--hue4) + var(--increment-angle));
+  --s-arriere: 100%;
+  --l-arriere: 50%;
+  --s: 100%;
+  --l: 75%;
+  --hue2: calc(var(hue1)+180);
+  --hue3: calc(var(hue3)+240);
+  --couleur-arriere-entete: hsl(var(--hue1), var(--s-arriere), 60%);
+  --couleur-arriere-accueil: hsl(var(--hue1), var(--s-arriere), 65%);
+  --couleur-arriere-evenement: hsl(var(--hue3), var(--s-arriere), 70%);
+  --couleur-arriere-galerie: hsl(var(--hue2), var(--s-arriere), 75%);
+  --couleur-arriere-footer: hsl(var(--hue1), var(--s-arriere), 80%);
+}
+
+/* ////////////////////////////////////////// */
+/* règles de base                             */
+/* ////////////////////////////////////////// */
+/*
+selecteur textuel de base
+*/
+h1 {
+  font-size: clamp(1.5rem, -2.875rem + 14vw, 5rem);
+  font-family: "Lato";
+}
+
+h2 {
+  font-size: clamp(1rem, -0.5714rem + 6.2857vw, 3.75rem);
+  font-family: "Protest Riot";
+}
+
+h3 {
+  font-family: "Kanit";
+}
+
+h4 {
+  font-family: "Protest Guerrilla";
+}
+
+h5 {
+  font-family: "Protest Revolution";
+  border: 1px dotted green;
+}
+
+h6 {
+  font-family: "Workbench";
+  text-decoration: underline;
+}
+
+button.evenement {
+  font-size: clamp(1.375rem, 0.4357rem + 3vw, 2.5rem);
+  padding: 12px 4px;
+  background-image: linear-gradient(rgb(255, 204, 0), rgba(187, 255, 0, 0.75));
+  border-radius: 10px;
+  box-shadow: 0px 5px 5px 1px #000000;
+  transition: background-image 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+button.evenement:hover {
+  background-image: linear-gradient(rgb(208, 255, 0), rgba(128, 255, 0, 0.75));
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 10px 1px #000000;
+}
+button.evenement:active {
+  background-image: linear-gradient(rgb(255, 102, 0), rgba(255, 0, 0, 0.75));
+}
+
+a {
+  color: red;
+  text-shadow: 0px 0px 6px #000000;
+}
+a:hover, a:focus {
+  color: blue;
+}
+a:active {
+  color: purple;
+}
+a:visited {
+  color: rgb(213, 71, 73);
+}
+
+/* ////////////////////////////////////////// */
+/* règles de la pagination                             */
+/* ////////////////////////////////////////// */
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "prompt", Arial, Helvetica, sans-serif;
+}
+
+.global {
+  display: flex;
+  justify-content: center;
+  min-height: var(--min-height);
+}
+
+.global > section,
+.global > header,
+.global > footer {
+  flex: 0 1 var(--width-section);
+  padding: 5rem 1rem;
+}
+
+.global > header {
+  flex: 0 1 1300px;
+}
+
+#entete {
+  background-color: var(--couleur-arriere-entete);
+  color: var(--couleur-entete);
+  position: relative;
+}
+
+#accueil {
+  background-color: var(--couleur-arriere-accueil);
+  color: var(--couleur-accueil);
+}
+
+#galerie {
+  background: linear-gradient(180deg, var(--couleur-arriere-accueil), var(--couleur-arriere-evenement));
+  color: var(--couleur-galerie);
+  z-index: 1;
+}
+
+#evenement {
+  background-color: var(--couleur-arriere-evenement);
+  color: var(--couleur-evenement);
+  position: relative;
+}
+
+#footer {
+  background-color: var(--couleur-arriere-footer);
+  color: var(--couleur-footer);
+}
+
+.vague {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.vague svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 58px;
+}
+
+.diagonal {
+  position: relative;
+  isolation: isolate;
+}
+
+.diagonal::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  transform: skewY(-5deg);
+  background-color: var(--couleur-arriere-galerie);
+}
+
+.entete__header {
+  background-image: url("./image/25231.png");
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position: 100% 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .entete__header {
+    background-position: 50% 50%;
+  }
+}
+.footer__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 2rem;
+}
+
+/* ////////////////////////////////////////// */
+/* composants                             */
+/* ////////////////////////////////////////// */
+.sociaux {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.sociaux path {
+  color: rgb(73, 13, 13);
+}
+
+.recherche {
+  display: flex;
+  justify-content: center;
+}
+
+.recherche__input {
+  display: block;
+  color: rgb(73, 13, 13);
+  border: 1px solid rgb(73, 13, 13);
+  border-radius: 10px 2px 2px 10px;
+}
+
+.recherche__button {
+  border: 1px solid rgb(73, 13, 13);
+  border-radius: 2px 10px 10px 2px;
+}
+
+.section__cours {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.carte {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 1 23%;
+  background-color: hsl(var(--hu1), var(--s-couleur-arriere), 75%);
+}/*# sourceMappingURL=style.css.map */
