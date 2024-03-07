@@ -46,4 +46,13 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
     --couleur-arriere-galerie: hsl(var(--hue2), var(--s-arriere), 75%);
     --couleur-arriere-footer: hsl(var(--hue1), var(--s-arriere), 80%);
 
+
+    #entete {
+        --_couleur-arriere-vague: hsl(var(--hue1), var(--s-arriere), 65%);
+
+    }
+
+    #evenement {
+        --_couleur-arriere-vague: hsl(var(--hue1), var(--s-arriere), 80%);
+    }
 }
