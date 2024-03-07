@@ -309,7 +309,7 @@ body {
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
-    width: 80vw;
+    width: 90vw;
   }
 }
 
@@ -342,7 +342,7 @@ body {
 }
 
 .menu-item a:hover {
-  background-color: rgba(116, 114, 114, 0.426);
+  background-color: rgba(60, 54, 54, 0.426);
   border-radius: 25px;
   color: white;
 }
