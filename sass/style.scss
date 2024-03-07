@@ -39,8 +39,14 @@ Ce thème a été développé dans le cadre du cours 4W4
 @import "footer";
 
 /* ////////////////////////////////////////// */
+/* Classe utile                             */
+/* ////////////////////////////////////////// */
+
+@import "utile/local";
+/* ////////////////////////////////////////// */
 /* composants                             */
 /* ////////////////////////////////////////// */
 @import "composant/sociaux";
 @import "composant/recherche";
 @import "composant/carte";
+@import "composant/menu";

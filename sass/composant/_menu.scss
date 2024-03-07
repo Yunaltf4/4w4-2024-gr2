@@ -1,0 +1,14 @@
+.menu-cours-container {
+    border: 10px solid rgb(255, 0, 0);
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    gap: 1rem;
+}
+
+.menu-item {
+    display: inline;
+}
