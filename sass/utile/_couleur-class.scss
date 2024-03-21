@@ -1,0 +1,38 @@
+@use "sass:list";
+
+@each $nom, $couleurs in $defaut {
+    @each $valeur, $couleur in $couleurs {
+        .clr-#{$nom}-#{$valeur} {
+            color : #{$couleur};
+
+        }
+
+        .bck-#{$nom}-#{$valeur} {
+
+            background-color: #{$couleur};
+        }
+    }
+}
+
+$agencement-couleur :(primaire: ($--clr-bleu-fonce, ($--clr-bleu-pale, $--clr-bleu-leger)),
+    secondaire: ($--clr-orange-fonce, $--clr-orange-pale),
+    ternaire: ($--clr-rouge-fonce, $--clr-rouge-pale),
+    vert: ($--clr-vert-fonce, $--clr-vert-pale));
+
+@mixin couleur-agencement($clr, $bck) {
+    color: $clr;
+
+    @if(list.length($bck)==1) {
+        background-color: $bck;
+    }
+
+    @else {
+        background-image: linear-gradient(90deg, $bck);
+    }
+}
+
+@each $valeur, $clr in $agencement-couleur {
+    .clr-agencement-#{$valeur} {
+        @include couleur-agencement($clr...);
+    }
+}
