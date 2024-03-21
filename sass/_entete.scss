@@ -1,12 +1,12 @@
-.entete__header{
-    background-image: url('./image/25231.png');
+.entete__header {
+    background-image: url('./image/download.png');
     background-repeat: no-repeat;
     background-size: 30%;
     background-position: 100% 50%;
 }
 
 @media screen and (max-width: 600px) {
-    .entete__header{
+    .entete__header {
         background-position: 50% 50%;
     }
 

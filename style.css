@@ -354,7 +354,7 @@ body {
 }
 
 .entete__header {
-  background-image: url("./image/25231.png");
+  background-image: url("./image/download.png");
   background-repeat: no-repeat;
   background-size: 30%;
   background-position: 100% 50%;
@@ -414,7 +414,8 @@ body {
   border-radius: 2px 10px 10px 2px;
 }
 
-.section__cours {
+.section__cours,
+.section__evemenent {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
