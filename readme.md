@@ -22,6 +22,15 @@
     - Le non de l'auteur
     - Courte description de votre tp1
 
+
+## Auteur : Tony Ton
+### Groupe : 02
+
+
+## Description du projet : 
+
+- Créer une page web pour un club de voyage pour montrer tout les destionations parfaites. 
+
 ### Liens URL (Github):
 - Github-page : https://yunaltf4.github.io/4w4-2024-gr2/
 
