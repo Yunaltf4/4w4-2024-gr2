@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <?= get_custom_logo() ?>
     <div id="menu" class="global">
         <header class="entete__menu">
             <label id="burger" for="chk_burger">

@@ -284,6 +284,14 @@ body {
   background-color: beige;
   border-radius: 10px;
 }
+.carte .post-categories {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+}
+.carte .post-categories a {
+  padding: 0.5rem;
+}
 
 .carte * {
   text-align: center;
@@ -297,7 +305,7 @@ body {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(107, 107, 107, 0.3);
   transition: transform 0.2s;
-  color: white;
+  color: rgb(136, 134, 134);
   z-index: 1;
   position: absolute;
   top: 0;

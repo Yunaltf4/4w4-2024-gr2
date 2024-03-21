@@ -20,9 +20,16 @@
 
 <body>
     <div id="menu" class="global">
-        <div class="entete__menu">
-            <div class="menu-cours-container">
-                <ul id="menu-cours" class="menu">
+        <header class="entete__menu">
+            <label id="burger" for="chk_burger">
+                <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                    color="#000">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                </svg> </label>
+            <input id="chk_burger" type="checkbox" name="">
+            <nav class="menu-principal-container">
+                <ul id="menu-principal" class="menu">
                     <li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-31">
                         <a
                             href="http://localhost/wp/wordpress-6.4.3-fr_FR/wordpress/index.php/2020/10/07/582-6n3-stage-285h/">Stage</a>
@@ -42,12 +49,18 @@
                             href="http://localhost/wp/wordpress-6.4.3-fr_FR/wordpress/index.php/2020/10/07/350-5n1-communication-et-dynamique-dune-equipe-de-travail-45h/">Communication
                             et dynamique d’une équipe de travail</a>
                     </li>
+                    <li id="menu-item-35" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35">
+                        <a href="#accueil">Accueil</a>
+                    </li>
+                    <li id="menu-item-36" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36">
+                        <a href="#galerie">Galerie</a>
+                    </li>
                 </ul>
-            </div>
-        </div>
+            </nav>
+        </header>
     </div>
     <div id="entete" class="global">
-        <header class="entete__header">
+        <section class="entete__header">
             <!-- facebook -->
 
             <div class="entete__header__texte">
@@ -57,13 +70,13 @@
             </div>
             <div class="entete__header__button"><button class="entete__button">Événements</button></div>
 
-        </header>
+        </section>
         <div class="vague">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
                 preserveAspectRatio="none">
-                <path
-                    d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-                    style="fill:var(--couleur-arriere-accueil)"></path>
+                <path class="remplissage"
+                    d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z">
+                </path>
             </svg>
         </div>
     </div>
@@ -327,9 +340,9 @@
         <div class="vague">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
                 preserveAspectRatio="none">
-                <path
-                    d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-                    style="fill:var(--couleur-arriere-footer)"></path>
+                <path class="remplissage"
+                    d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z">
+                </path>
             </svg>
         </div>
     </div>
